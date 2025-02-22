@@ -43,9 +43,11 @@ Route::get('/create', function () {
  
 Route::get('products/{product}', function (Product $product) {
     $latestProducts = Product::orderBy('created_at', "desc")->take(3)->get();
+    $relatedproducts = Product::orderBy('created_at', 'asc')->take(3)->get();
     
     return view ('productdetail', [
       'product' => $product,
       'latestProducts' => $latestProducts,
+      'relatedproducts' => $relatedproducts,
     ]);
 });

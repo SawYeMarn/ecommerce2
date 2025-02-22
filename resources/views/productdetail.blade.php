@@ -207,8 +207,10 @@
               >
             </div>
             <div class="flex flex-col gap-7">
-             <x-relatedproduct />
-            
+
+            @foreach ($relatedproducts as $product)
+             <x-relatedproduct :product="$product" />
+            @endforeach
              
             </div>
           </div>

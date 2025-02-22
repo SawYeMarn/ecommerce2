@@ -10,10 +10,10 @@
                     <p
                       class="text-lg group-hover:text-primary transition-all duration-200 font-semibold"
                     >
-                      Product Name
+                      {{$product->name}}
                     </p>
                     <div class="flex items-center gap-2">
-                      <p class="font-bold">100000 MMK</p>
+                      <p class="font-bold">{{$product->price}} MMK</p>
                     </div>
                   </div>
                 </div>
