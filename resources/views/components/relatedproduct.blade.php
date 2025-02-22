@@ -1,4 +1,4 @@
-<a href="/productDetail.html">
+<a href="/products/{{$product->id}}">
                 <div class="flex items-center gap-5 group cursor-pointer">
                   <div class="basis-[30%] h-auto rounded-xl overflow-hidden">
                     <img

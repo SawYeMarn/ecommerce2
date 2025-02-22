@@ -1,4 +1,4 @@
-<a class="h-min block" href="/productDetail.html">
+<a class="h-min block"  href="/products/{{$product->id}}">
                 <div
                   class="rounded-lg h-full flex lg:flex-col flex-row cursor-pointer hover:translate-y-[-10px] transition-all duration-200 group shadow-md hover:shadow-lg overflow-hidden"
                 >
