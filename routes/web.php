@@ -1,14 +1,9 @@
 <?php
-
+use App\Http\Controllers\MyController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-       $products = Product::where('name','LIKE','%'.request('search').'%')->get();
-    return view('welcome', [
-        'products' => $products
-    ]);      
-});
+Route::get('/',[MyController:: class,'index']);
 
 Route::get('/register', function () {
     
@@ -41,13 +36,9 @@ Route::get('/create', function () {
 });
 
  
-Route::get('products/{product}', function (Product $product) {
-    $latestProducts = Product::orderBy('created_at', "desc")->take(3)->get();
-    $relatedproducts = Product::orderBy('created_at', 'asc')->take(4)->get();
-    
-    return view ('productdetail', [
-      'product' => $product,
-      'latestProducts' => $latestProducts,
-      'relatedproducts' => $relatedproducts,
-    ]);
-});
+Route::get('products/{product}', [
+    MyController::class ,"show"
+] );
+
+
+// Route::get('/admin/products')
