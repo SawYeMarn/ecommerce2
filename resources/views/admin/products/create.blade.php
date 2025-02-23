@@ -1,13 +1,14 @@
 <x-admin-layout>
 
-<x-adminlayout>
+
       <div
         class="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden"
       >
         <main>
           <div class="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10 bg-gray-50">
             <div class="border p-10 bg-white rounded-md">
-              <form class="space-y-4 md:space-y-6">
+              <form class="space-y-4 md:space-y-6" method="POST"  action="/admin/products/store">
+                @csrf
                 <div class="">
                   <div class="image-wrapper">
                     <input type="file" />
@@ -17,6 +18,7 @@
                   <div class="flex flex-col">
                     <label class="font-semibold text-sm">Product Name</label>
                     <input
+                      name="name"
                       class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
                       type="text"
                       placeholder="Enter your product Name"
@@ -25,6 +27,7 @@
                   <div class="flex flex-col">
                     <label class="font-semibold text-sm">Price</label>
                     <input
+                    name="price"
                       class="outline-none px-4 focus:ring-0 border-[1px] border-black/10 py-4 rounded-lg focus:border-primary transition-all mt-2"
                       type="text"
                       placeholder="Enter price"
@@ -45,6 +48,7 @@
                   <div>
                     <label class="font-semibold text-sm">Description</label>
                     <textarea
+                    name="description"
                       class="w-full border-[1px] border-black/10 py-3 px-3 rounded-[5px]"
                       placeholder="Enter Description"
                       rows="5"
@@ -52,18 +56,18 @@
                   </div>
                 </div>
                 <div class="flex items-center justify-end space-x-5">
-                  <a
+                  <button
                     href="/admin.html"
                     class="text-sm px-4 bg-gray-600 hover:bg-gray-700 text-white flex items-center gap-3 shadow-md py-3 font-semibold rounded-md transition-all active:animate-press"
                   >
                     Cancel
-                  </a>
-                  <a
-                    href="/admin.html"
+                  </button>
+                  <button type="submit"
+                    
                     class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-primary hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
                   >
                     Create
-                  </a>
+</button>
                 </div>
               </form>
             </div>
@@ -71,9 +75,7 @@
         </main>
       </div>
     </div>
-
-    </x-adminlayout>
-
+ 
 
 
 

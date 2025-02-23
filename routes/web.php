@@ -41,8 +41,9 @@ Route::get('products/{product}', [
     MyController::class ,"show"
 ] );
 
-Route::get('/admin/products',[AdminProductController::class ,"index"]);
+Route::get('/admin/products',[AdminProductController::class ,"index"])->name('product.index');
 
-Route::get('/admin/productscreate',[AdminProductController::class ,"create"]);
+Route::get('/admin/products/create',[AdminProductController::class ,"create"]);
+Route::post('/admin/products/store',[AdminProductController::class ,"store"]);
 
 // Route::get('/admin/products')

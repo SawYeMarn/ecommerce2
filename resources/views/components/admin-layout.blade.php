@@ -25,7 +25,7 @@
         class="absolute left-0 top-0 z-[9999] flex h-screen w-[270px] flex-col overflow-y-hidden text-white bg-secondary duration-300 ease-linear lg:static transition-all lg:translate-x-0"
       >
         <div class="flex items-center justify-between gap-2 py-5.5 lg:py-6.5">
-          <a href="/home.html" class="block w-full">
+          <a href="/admin/products" class="block w-full">
             <div
               class="py-[1rem] border-b border-b-gray-300 px-6 w-full flex items-center space-x-3"
             >
