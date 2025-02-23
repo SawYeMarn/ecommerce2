@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\AdminProductController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -40,5 +41,6 @@ Route::get('products/{product}', [
     MyController::class ,"show"
 ] );
 
+Route::get('/admin/products',[AdminProductController::class ,"index"]);
 
 // Route::get('/admin/products')
