@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class MyController extends Controller
 {
     public function index() {
-        $products = Product::where('name','LIKE','%'.request('search').'%')->get();
+        $products = Product::where('name','LIKE','%'.request('search').'%')->paginate(12);
      return view('welcome', [
          'products' => $products
      ]);      

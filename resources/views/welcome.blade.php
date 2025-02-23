@@ -107,6 +107,8 @@
        <x-ProductCard :product="$product"/>
 @endforeach
           </div>
+
+          {{$products->links()}}
     
           
     

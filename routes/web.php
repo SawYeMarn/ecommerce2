@@ -43,4 +43,6 @@ Route::get('products/{product}', [
 
 Route::get('/admin/products',[AdminProductController::class ,"index"]);
 
+Route::get('/admin/productscreate',[AdminProductController::class ,"create"]);
+
 // Route::get('/admin/products')
