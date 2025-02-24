@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\AdminProductController;
 use App\Models\Product;
@@ -45,5 +46,8 @@ Route::get('/admin/products',[AdminProductController::class ,"index"])->name('pr
 
 Route::get('/admin/products/create',[AdminProductController::class ,"create"]);
 Route::post('/admin/products/store',[AdminProductController::class ,"store"]);
+Route::post('/admin/products',[AdminProductController::class ,"store"]);
+
+
 
 // Route::get('/admin/products')

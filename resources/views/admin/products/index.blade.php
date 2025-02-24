@@ -90,8 +90,11 @@
                           <div
                             class="space-x-3 flex items-center min-w-[200px] w-auto max-w-[500px]"
                           >
+
+         
                             <a
-                              href=""
+                              href="/admin/products/create"
+                              
                               class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-primary hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
                             >
                               <svg
@@ -107,7 +110,9 @@
                               </svg>
                               Edit
                             </a>
+                                                          
                             <a
+                            type="submit"
                               href=""
                               class="text-sm px-4 flex items-center gap-3 shadow-md py-3 text-white bg-red-500 hover:bg-blue-900 font-semibold rounded-md transition-all active:animate-press"
                             >
@@ -124,6 +129,7 @@
                               </svg>
                               Delete
                             </a>
+                          
                           </div>
                         </td>
                       </tr>

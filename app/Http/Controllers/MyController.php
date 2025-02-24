@@ -14,6 +14,7 @@ class MyController extends Controller
      return view('welcome', [
          'products' => $products
      ]);      
+    
  }
 
  public function show(Product $product) {
@@ -25,5 +26,7 @@ class MyController extends Controller
       'latestProducts' => $latestProducts,
       'relatedproducts' => $relatedproducts,
     ]);
+
+    
 }
 }

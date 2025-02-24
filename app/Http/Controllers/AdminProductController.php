@@ -29,4 +29,5 @@ class AdminProductController extends Controller
         ]);
         return redirect()->route('product.index');
     }
+
 }
