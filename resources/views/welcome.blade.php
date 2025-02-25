@@ -43,60 +43,17 @@
           <div>
             <p class="text mt-8 mb-3 font-bold">Product By Category</p>
             <div>
-              <div
+            @foreach ($categories as $category)
+          <div
+
                 class="flex items-center cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
               >
-                <p class="text-sm hover:text-primary transition-all">All</p>
-              </div>
-              <div
-                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
-              >
-                <p
-                  class="text-sm hover:text-primary transition-all text-primary font-medium"
-                >
-                  Beauty
-                </p>
-              </div>
-              <div
-                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
-              >
-                <p
-                  class="text-sm hover:text-primary transition-all font-medium"
-                >
-                  Clothes
-                </p>
-              </div>
-              <div
-                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
-              >
-                <p
-                  class="text-sm hover:text-primary transition-all font-medium"
-                >
-                  Electronic & IT
-                </p>
-              </div>
-              <div
-                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
-              >
-                <p
-                  class="text-sm hover:text-primary transition-all font-medium"
-                >
-                  Food
-                </p>
-              </div>
-              <div
-                class="flex items-center border-b-[1px] border-b-black/10 cursor-pointer gap-2 py-3 px-2 border-t-[1px] border-t-black/10"
-              >
-                <p
-                  class="text-sm hover:text-primary transition-all font-medium"
-                >
-                  Daily Life Good
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+                <p class="text-sm hover:text-primary transition-all">{{$category->name}}</p>
+              </div> 
+              @endforeach
+          </div> 
+               </div> 
+               </div> 
         <div
           class="lg:w-[75%] md:w-[65%] md:mt-0 mt-10 w-full mb-12 md:pl-[8%]"
         >

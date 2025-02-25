@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -12,7 +14,8 @@ class MyController extends Controller
         ->orderBy('created_at', "desc")
         ->paginate(12);
      return view('welcome', [
-         'products' => $products
+         'products' => $products,
+         "categories" => Category::all(),
      ]);      
     
  }
